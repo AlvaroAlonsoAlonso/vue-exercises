@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-s-default);
+  font-weight: var(--font-w-regular);
+  line-height: 1.5;
+  color: var(--secondary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-w-bold);
+  line-height: 1.2;
+  color: var(--primary-color);
+}
+
+p {
+  font-size: var(--font-s-default);
+  line-height: 1.5;
+}
+
+button {
+  font-family: var(--font-primary);
+  font-size: var(--font-s-default);
+  font-weight: var(--font-w-bold);
+  color: #fff;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
