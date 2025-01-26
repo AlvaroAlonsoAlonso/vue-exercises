@@ -7,6 +7,8 @@ import '@fontsource/roboto/400.css'
 import '@fontsource/roboto/700.css'
 import '@fontsource/open-sans/300.css'
 import '@fontsource/open-sans/600.css'
+import '@/assets/reset.css'
+import '@/assets/variables.css'
 
 const app = createApp(App)
 
