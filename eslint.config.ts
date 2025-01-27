@@ -40,7 +40,7 @@ export default defineConfigWithVueTs(
     },
   },
 
-  pluginVue.configs['flat/essential'],
+  pluginVue.configs['flat/recommended'],
   vueTsConfigs.recommended,
   skipFormatting,
 )

@@ -6,7 +6,7 @@ import ParentComponent from '@/components/ParentComponent.vue'
 <template>
   <section class="home">
     <RouterLink class="home__link" to="/catalogo">Go to catalogo</RouterLink>
-    <TheCounter class="home__counter" />
+    <TheCounter />
     <ParentComponent />
   </section>
 </template>
@@ -29,10 +29,6 @@ import ParentComponent from '@/components/ParentComponent.vue'
       background-color: var(--primary-color);
       color: var(--black-color);
     }
-  }
-
-  &__counter {
-    width: 10em;
   }
 }
 </style>

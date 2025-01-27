@@ -2,11 +2,26 @@
 import { defineProps } from 'vue'
 
 defineProps({
-  image: String,
-  title: String,
-  description: String,
-  price: String,
-  button: String,
+  image: {
+    type: String,
+    default: '',
+  },
+  title: {
+    type: String,
+    default: '',
+  },
+  description: {
+    type: String,
+    default: '',
+  },
+  price: {
+    type: String,
+    default: '',
+  },
+  button: {
+    type: String,
+    default: '',
+  },
 })
 </script>
 <template>
