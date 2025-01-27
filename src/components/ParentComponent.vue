@@ -2,12 +2,18 @@
 import { ref } from 'vue'
 import ChildComponent from '@/components/ChildComponent.vue'
 
-const message = ref('')
+const messageChild = ref('')
+const messageParent = ref('')
 function handleChild(child: string) {
-  message.value = child
+  messageChild.value = child
+}
+
+function handleParent() {
+  messageParent.value = 'Hello, from parent component'
 }
 </script>
 <template>
-  <ChildComponent @button-hello="handleChild" />
-  <p v-if="message">{{ message }}</p>
+  <p v-if="messageChild">{{ messageChild }}</p>
+  <ChildComponent @button-hello="handleChild" :message-parent="messageParent" />
+  <button @click="handleParent">Click Me, for hello for parent</button>
 </template>

@@ -1,6 +1,9 @@
 <script setup lang="ts">
-import { defineEmits } from 'vue'
+import { defineEmits, defineProps } from 'vue'
 
+defineProps({
+  messageParent: String,
+})
 const emit = defineEmits(['buttonHello'])
 
 const getGreet = () => {
@@ -10,4 +13,5 @@ const getGreet = () => {
 
 <template>
   <button @click="getGreet">Click Me, for hello child</button>
+  <p v-if="messageParent">{{ messageParent }}</p>
 </template>
