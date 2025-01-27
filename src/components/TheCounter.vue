@@ -24,29 +24,38 @@ const countNumber = computed(() => count.value)
     <TheTitle>
       <h2>Exercise 6</h2>
     </TheTitle>
-    <button
-      class="counter__button"
-      aria-label="It's a button that you press to increment a number."
-      @click="increment"
-      v-if="isTenOrMayor"
-    >
-      Increment
-    </button>
-    <button
-      class="counter__button"
-      aria-label="A button that decreases a number when pressed to zero."
-      @click="decrement"
-      v-if="isZero"
-    >
-      Decrement
-    </button>
-    <p>Count: {{ countNumber }}</p>
+    <article class="counter__info">
+      <button
+        class="counter__button"
+        aria-label="It's a button that you press to increment a number."
+        @click="increment"
+        v-if="isTenOrMayor"
+      >
+        Increment
+      </button>
+      <button
+        class="counter__button"
+        aria-label="A button that decreases a number when pressed to zero."
+        @click="decrement"
+        v-if="isZero"
+      >
+        Decrement
+      </button>
+      <p>Count: {{ countNumber }}</p>
+    </article>
   </section>
 </template>
 <style lang="scss" scoped>
 .counter {
-  &__button {
-    margin: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
   }
 }
 </style>

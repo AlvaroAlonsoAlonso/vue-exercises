@@ -66,11 +66,16 @@ p {
 
 button {
   font-family: var(--font-primary);
-  font-size: var(--font-s-default);
+  font-size: var(--font-s-large);
   font-weight: var(--font-w-bold);
-  color: #fff;
+  color: var(--black-color);
   background-color: var(--primary-color);
   cursor: pointer;
-  padding: 1em;
+  padding: 0.5em;
   border-radius: 0.5em;
+}
+
+button:hover {
+  background-color: var(--black-color);
+  color: var(--primary-color);
 }
