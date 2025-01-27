@@ -15,7 +15,7 @@ export function useCounter() {
   }
 
   const isZero = computed(() => NUMBER_ZERO < count.value)
-  const isTenOrMayor = computed(() => count.value < NUMBER_TEN)
+  const isTenOrMayor = computed(() => count.value >= NUMBER_TEN)
   const countNumber = computed(() => count.value)
 
   return {

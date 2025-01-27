@@ -11,15 +11,13 @@ const { countNumber, increment, decrement, isTenOrMayor, isZero } = useCounter()
     </TheTitle>
     <article class="counter__info">
       <button
-        class="counter__button"
         aria-label="It's a button that you press to increment a number."
         @click="increment"
-        v-if="isTenOrMayor"
+        :class="{ 'counter__button-green': isTenOrMayor }"
       >
         Increment
       </button>
       <button
-        class="counter__button"
         aria-label="A button that decreases a number when pressed to zero."
         @click="decrement"
         v-if="isZero"
@@ -41,6 +39,11 @@ const { countNumber, increment, decrement, isTenOrMayor, isZero } = useCounter()
     flex-direction: column;
     gap: 1rem;
     align-items: center;
+  }
+
+  &__button-green {
+    background-color: green;
+    color: white;
   }
 }
 </style>
