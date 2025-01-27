@@ -71,4 +71,6 @@ button {
   color: #fff;
   background-color: var(--primary-color);
   cursor: pointer;
+  padding: 1em;
+  border-radius: 0.5em;
 }

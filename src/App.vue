@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import TheTitle from '@/components/TheTitle.vue'
+import TheCounter from '@/components/TheCounter.vue'
 </script>
 
 <template>
-  <TheTitle>
-    <h2>Exercise 4</h2>
-  </TheTitle>
+  <TheCounter />
   <RouterView />
 </template>
