@@ -1,13 +1,21 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import TheTitle from '@/components/TheTitle.vue'
 import { useCounter } from '@/composables/useCounter'
 
 const { countNumber, increment, decrement, isTenOrMayor, isZero } = useCounter()
+
+const multiplique = computed(() => {
+  return countNumber.value * 2
+})
 </script>
 <template>
   <section class="counter">
-    <TheTitle>
-      <h2>Exercise 6</h2>
+    <TheTitle v-if="countNumber">
+      <h2>Count: {{ countNumber }}</h2>
+    </TheTitle>
+    <TheTitle v-if="multiplique">
+      <h2>multiplique: {{ multiplique }}</h2>
     </TheTitle>
     <article class="counter__info">
       <button
@@ -24,7 +32,6 @@ const { countNumber, increment, decrement, isTenOrMayor, isZero } = useCounter()
       >
         Decrement
       </button>
-      <p>Count: {{ countNumber }}</p>
     </article>
   </section>
 </template>
