@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import TheCounter from '@/components/TheCounter.vue'
+import ParentComponent from '@/components/ParentComponent.vue'
 </script>
 
 <template>
   <section class="home">
     <RouterLink class="home__link" to="/catalogo">Go to catalogo</RouterLink>
     <TheCounter class="home__counter" />
+    <ParentComponent />
   </section>
 </template>
 
