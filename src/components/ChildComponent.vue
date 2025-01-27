@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import { defineEmits, defineProps } from 'vue'
+import { defineEmits, inject } from 'vue'
 
-defineProps({
-  messageParent: String,
-})
+const messageParent = inject('messageParent')
 const emit = defineEmits(['buttonHello'])
 
 const getGreet = () => {
