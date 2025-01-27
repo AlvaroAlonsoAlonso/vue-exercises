@@ -3,8 +3,6 @@ import TheTitle from '@/components/TheTitle.vue'
 </script>
 
 <template>
-  <TheTitle />
+  <TheTitle propTitle="Exercices 3" />
   <RouterView />
 </template>
-
-<style scoped></style>

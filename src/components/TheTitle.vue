@@ -1,3 +1,10 @@
+<script lang="ts" setup>
+import { defineProps } from 'vue'
+
+defineProps({
+  propTitle: String,
+})
+</script>
 <template>
-  <h2>Exercise 2</h2>
+  <h2>{{ propTitle }}</h2>
 </template>
